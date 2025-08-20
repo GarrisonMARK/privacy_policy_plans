@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1v2w3x4y5z6"]
+
+[ext_resource type="Script" path="res://content_page.gd" id="1_abcde"]
+
+[sub_resource type="SystemFont" id="SystemFont_ytr4m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hy44"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Privacy" type="Node2D"]
+script = ExtResource("1_abcde")
+page_url = "https://your-website.com/#privacy"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -576.0
+offset_top = -328.0
+offset_right = 576.0
+offset_bottom = 328.0
+color = Color(0, 0, 0, 0.941176)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -500.0
+offset_top = -250.0
+offset_right = 500.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(1, 0.883333, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_ytr4m")
+theme_override_font_sizes/font_size = 18
+autowrap = true
+text = "Simple Privacy Block Hot Agents
+Effective Date: July 3, 2025
+This Privacy Policy describes how random chaos mechanics studios handles information in connection with your use of the Block Hot Agents mobile application
+
+We do not collect any personal data from you through this App.
+ * No Personal Information Collected: We do not collect, store, share, or use any personally identifiable information about you, such as your name, email address, location, or device identifiers.
+ * No Usage Data Collected: We do not collect information about how you use the App.
+ * No Data Sharing: Since we do not collect any data, we do not share any data with third parties.
+ * No Cookies or Tracking Technologies: The App does not use cookies, pixels, or other tracking technologies.
+ * Donations: If you choose to make a donation to support the App, this process is handled entirely by the app store's payment processor (e.g., Apple App Store, Google Play Store).
+ We do not receive or store any of your personal financial information related to these transactions.
+Third-Party Services (App Stores):
+Please note that your use of the App is subject to the terms and privacy policies of the platform where you downloaded the App (e.g., Apple App Store, Google Play Store).
+ These platforms may collect certain information, such as device information or purchase history. We have no control over, and assume no responsibility for, the content, privacy policies,
+ or practices of any third-party services.
+Children's Privacy:
+Our App is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13.
+ If we become aware that we have inadvertently received personal information from a user under the age of 13, we will delete the information from our records.
+Changes to This Privacy Policy:
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the App or on our website (if applicable).
+0 You are advised to review this Privacy Policy periodically for any changes.
+Contact Us:
+If you have any questions about this Privacy Policy, please contact us at:
+
+randomchaosmechanicsstudios@gmail.com
+"
+
+[node name="CopyLinkButton" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 220.0
+offset_right = 560.0
+offset_bottom = 284.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
+text = "Copy Link"
+
+[connection signal="pressed" from="CopyLinkButton" to="." method="_on_copy_link_button_pressed"]
