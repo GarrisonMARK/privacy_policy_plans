@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtn38bp02dijs"]
 
-[sub_resource type="SystemFont" id="SystemFont_ytr4m"]
+[ext_resource type="Script" uid="uid://dje28k6sg83tq" path="res://menu.gd" id="1_flick"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hy44"]
 bg_color = Color(0, 0, 0, 1)
@@ -15,172 +15,63 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [node name="menu" type="Node2D"]
+script = ExtResource("1_flick")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="credits" type="Node2D" parent="."]
-visible = false
-z_index = 71
+[node name="Navigation" type="Node2D" parent="."]
+z_index = 100
 
-[node name="ColorRect" type="ColorRect" parent="credits"]
-offset_left = -576.0
-offset_top = -328.0
-offset_right = 576.0
-offset_bottom = 328.0
-color = Color(0, 0, 0, 0.85098)
-
-[node name="Label" type="Label" parent="credits"]
-offset_left = -568.0
+[node name="PrivacyButton" type="Button" parent="Navigation"]
+offset_left = -570.0
 offset_top = -320.0
-offset_right = 531.0
-offset_bottom = 190.0
-theme_override_colors/font_color = Color(1, 0.883333, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = SubResource("SystemFont_ytr4m")
-theme_override_font_sizes/font_size = 17
-text = "
+offset_right = -410.0
+offset_bottom = -260.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
+text = "Privacy"
 
-all assete were purchased from:
-
-Credit Kenney 
-www.kenney.nl
-
-License (Creative Commons Zero, CC0)
-
-any additional art
-mark garrison
-
-dev 
-mark garrison
-
-
-producer
-random chaos mechanics studios
-
-contact us 
-randomchaosmechanicsstudios@gmail.com
-"
-horizontal_alignment = 1
-
-[node name="exit_credits" type="Button" parent="credits"]
-offset_left = 384.0
+[node name="Privacy2Button" type="Button" parent="Navigation"]
+offset_left = -400.0
 offset_top = -320.0
-offset_right = 568.0
-offset_bottom = -256.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+offset_right = -240.0
+offset_bottom = -260.0
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
-text = "exit"
+text = "Privacy 2"
 
-[node name="Privacy" type="Node2D" parent="."]
-z_index = 72
-
-[node name="ColorRect" type="ColorRect" parent="Privacy"]
-offset_left = -576.0
-offset_top = -328.0
-offset_right = 576.0
-offset_bottom = 328.0
-color = Color(0, 0, 0, 0.941176)
-
-[node name="Label" type="Label" parent="Privacy"]
-offset_left = -568.0
-offset_top = -312.0
-offset_right = 539.0
-offset_bottom = 205.0
-theme_override_colors/font_color = Color(1, 0.883333, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = SubResource("SystemFont_ytr4m")
-theme_override_font_sizes/font_size = 12
-text = "Simple Privacy Block Hot Agents
-Effective Date: July 3, 2025
-This Privacy Policy describes how random chaos mechanics studios handles information in connection with your use of the Block Hot Agents mobile application
-
-We do not collect any personal data from you through this App.
- * No Personal Information Collected: We do not collect, store, share, or use any personally identifiable information about you, such as your name, email address, location, or device identifiers.
- * No Usage Data Collected: We do not collect information about how you use the App.
- * No Data Sharing: Since we do not collect any data, we do not share any data with third parties.
- * No Cookies or Tracking Technologies: The App does not use cookies, pixels, or other tracking technologies.
- * Donations: If you choose to make a donation to support the App, this process is handled entirely by the app store's payment processor (e.g., Apple App Store, Google Play Store).
- We do not receive or store any of your personal financial information related to these transactions.
-Third-Party Services (App Stores):
-Please note that your use of the App is subject to the terms and privacy policies of the platform where you downloaded the App (e.g., Apple App Store, Google Play Store).
- These platforms may collect certain information, such as device information or purchase history. We have no control over, and assume no responsibility for, the content, privacy policies,
- or practices of any third-party services.
-Children's Privacy:
-Our App is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13.
- If we become aware that we have inadvertently received personal information from a user under the age of 13, we will delete the information from our records.
-Changes to This Privacy Policy:
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the App or on our website (if applicable).
-0 You are advised to review this Privacy Policy periodically for any changes.
-Contact Us:
-If you have any questions about this Privacy Policy, please contact us at:
-
-randomchaosmechanicsstudios@gmail.com
-"
-
-[node name="exit_prvacy" type="Button" parent="Privacy"]
-offset_left = 376.0
-offset_top = 136.0
-offset_right = 560.0
-offset_bottom = 200.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
-text = "exit"
-
-[node name="disclaimer" type="Node2D" parent="."]
-visible = false
-z_index = 73
-
-[node name="ColorRect" type="ColorRect" parent="disclaimer"]
-offset_left = -576.0
-offset_top = -328.0
-offset_right = 576.0
-offset_bottom = 328.0
-color = Color(0, 0, 0, 0.905882)
-
-[node name="Label" type="Label" parent="disclaimer"]
-offset_left = -568.0
+[node name="Privacy3Button" type="Button" parent="Navigation"]
+offset_left = -230.0
 offset_top = -320.0
-offset_right = 531.0
-offset_bottom = 190.0
-theme_override_colors/font_color = Color(1, 0.883333, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = SubResource("SystemFont_ytr4m")
-theme_override_font_sizes/font_size = 17
-text = "
-\"Welcome to Block Hot Agents!
-
-Please Note: This app is a work of satirical parody and is created purely for entertainment and humorous commentary.
-
-Regarding the 'Iceblock' App:
-This app is not created by, associated with, endorsed by, or sponsored by the 'Iceblock' app or its original developers. Any 
- similarities in concept, themes, or appearance are purely for the purpose of satirical commentary
- on existing applications and their functions.
- We have not used any code, assets, or proprietary information from the 'Iceblock' app.
-
-Regarding Government Imagery:
-The imagery, seals, or logos that resemble government emblems within this app are entirely fictional and used for satirical effect only.
- They are not official U.S. Government seals, nor are they affiliated with,
- endorsed by, or sponsored by the U.S. Government or any of its departments, agencies, or instrumentalities.
- This app aims to provide social commentary through humor and does not imply any official connection or approval whatsoever.
-
-All content in this app is original work.\"
-"
-
-[node name="exit_disclaimer" type="Button" parent="disclaimer"]
-offset_left = 200.0
-offset_top = -312.0
-offset_right = 384.0
-offset_bottom = -248.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+offset_right = -70.0
+offset_bottom = -260.0
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
-text = "exit"
+text = "Privacy 3"
 
-[connection signal="pressed" from="credits/exit_credits" to="." method="_on_exit_credits_pressed"]
-[connection signal="pressed" from="Privacy/exit_prvacy" to="." method="_on_exit_prvacy_pressed"]
-[connection signal="pressed" from="disclaimer/exit_disclaimer" to="." method="_on_exit_disclaimer_pressed"]
+[node name="CreditsButton" type="Button" parent="Navigation"]
+offset_left = -60.0
+offset_top = -320.0
+offset_right = 100.0
+offset_bottom = -260.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
+text = "Credits"
+
+[node name="DisclaimerButton" type="Button" parent="Navigation"]
+offset_left = 110.0
+offset_top = -320.0
+offset_right = 270.0
+offset_bottom = -260.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
+text = "Disclaimer"
+
+[node name="ContentContainer" type="Node2D" parent="."]
+position = Vector2(0, 50)
+
+[connection signal="pressed" from="Navigation/PrivacyButton" to="." method="_on_privacy_button_pressed"]
+[connection signal="pressed" from="Navigation/Privacy2Button" to="." method="_on_privacy2_button_pressed"]
+[connection signal="pressed" from="Navigation/Privacy3Button" to="." method="_on_privacy3_button_pressed"]
+[connection signal="pressed" from="Navigation/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Navigation/DisclaimerButton" to="." method="_on_disclaimer_button_pressed"]

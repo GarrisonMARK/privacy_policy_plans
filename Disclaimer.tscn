@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2v3w4x5y607"]
+
+[ext_resource type="Script" uid="uid://xivlvs1wvdkx" path="res://content_page.gd" id="1_abcde"]
+
+[sub_resource type="SystemFont" id="SystemFont_ytr4m"]
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hy44"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Disclaimer" type="Node2D"]
+script = ExtResource("1_abcde")
+page_url = "https://your-website.com/#disclaimer"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -576.0
+offset_top = -328.0
+offset_right = 576.0
+offset_bottom = 328.0
+color = Color(0, 0, 0, 0.905882)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -500.0
+offset_top = -250.0
+offset_right = 500.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(1, 0.883333, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_ytr4m")
+theme_override_font_sizes/font_size = 18
+text = "
+\"Welcome to Block Hot Agents!
+
+Please Note: This app is a work of satirical parody and is created purely for entertainment and humorous commentary.
+
+Regarding the 'Iceblock' App:
+This app is not created by, associated with, endorsed by, or sponsored by the 'Iceblock' app or its original developers. Any
+ similarities in concept, themes, or appearance are purely for the purpose of satirical commentary
+ on existing applications and their functions.
+ We have not used any code, assets, or proprietary information from the 'Iceblock' app.
+
+Regarding Government Imagery:
+The imagery, seals, or logos that resemble government emblems within this app are entirely fictional and used for satirical effect only.
+ They are not official U.S. Government seals, nor are they affiliated with,
+ endorsed by, or sponsored by the U.S. Government or any of its departments, agencies, or instrumentalities.
+ This app aims to provide social commentary through humor and does not imply any official connection or approval whatsoever.
+
+All content in this app is original work.\"
+"
+
+[node name="CopyLinkButton" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 220.0
+offset_right = 560.0
+offset_bottom = 284.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
+text = "Copy Link"
+
+[connection signal="pressed" from="CopyLinkButton" to="." method="_on_copy_link_button_pressed"]
